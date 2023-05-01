@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const Example = () => {
-  const sample1 = <h1 className="greeting">Hello World</h1>;
-
+  const sample1 = <h1 className='greeting'>Hello World</h1>;
   // React.createElement("h1", {
   //   className: "greeting"
   // }, "Hello World");
@@ -24,10 +23,10 @@ const Example = () => {
   );
 
   return React.createElement(
-    "div",
+    'div',
     null,
-    React.createElement("h1", null, "Hello!"),
-    React.createElement("h2", null, "Good to see you.")
+    React.createElement('h1', null, 'Hello!'),
+    React.createElement('h2', null, 'Good to see you.')
   );
 };
 

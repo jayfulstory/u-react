@@ -3,11 +3,11 @@
 文：変数宣言、for文、if文、switch文やセミコロンで区切るもの。
 */
 
-import "./Child.css";
+import './Child.css';
 
 const Child = () => {
   return (
-    <div className="component">
+    <div className='component'>
       <h3>式と文</h3>
     </div>
   );
