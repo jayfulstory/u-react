@@ -2,24 +2,25 @@ import { useState } from 'react';
 const Example = () => {
   const numArray = [1, 2, 3, 4, 5];
   const [nums, setNums] = useState(numArray);
-  // 배열의 요소를 랜덤하게 섞는 함수
+  // 配列の要素をランダムに混ぜる関数
   const shuffleArray = () => {
-    const shuffledArray = [...nums]; // 현재 배열 복사
+    const shuffledArray = [...nums]; // 現在の配列をコピー
     let currentIndex = nums.length;
 
-    // 배열의 요소를 랜덤하게 섞음
+    // 配列の要素をランダムに混ぜる
     while (0 !== currentIndex) {
       const randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
-      // console.log(randomIndex);
-      // console.log(currentIndex);
-
+      //
+      console.log(`current ${currentIndex}`);
+      console.log(`random ${randomIndex}`);
+      //
       const temporaryValue = shuffledArray[currentIndex];
       shuffledArray[currentIndex] = shuffledArray[randomIndex];
       shuffledArray[randomIndex] = temporaryValue;
     }
 
-    // 새로운 배열로 상태를 업데이트
+    // 新しい配列をにアップデート
     setNums(shuffledArray);
   };
   return (

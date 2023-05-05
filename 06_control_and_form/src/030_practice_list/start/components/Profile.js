@@ -1,18 +1,22 @@
-const Profile = ({ name, age, hobbies }) => {
+const Profile = ({ profiles }) => {
   return (
-    <div>
-      <hr />
-      <div>Name: {name}</div>
-      <div>Age: {age}</div>
-      <div>
-        <div>Hobby:</div>
-        <ul>
-          {hobbies.map((hobby) => (
-            <li>{hobby}</li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    <>
+      {profiles.map(profile => (
+        <li key={profile.name}>
+          <hr />
+          <div>Name: {profile.name}</div>
+          <div>Age: {profile.age}</div>
+          <div>
+            <div>Hobby:</div>
+            <ul>
+              {profile.hobbies.map(hobby => (
+                <li key={hobby}>{hobby}</li>
+              ))}
+            </ul>
+          </div>
+        </li>
+      ))}
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
-import "./Example.css";
-import { useState } from "react";
+import './Example.css';
+import { useState } from 'react';
 
 const Example = () => {
   const inputFact = () => ({
@@ -10,16 +10,16 @@ const Example = () => {
   const [inputs, setInputs] = useState([inputFact(), inputFact(), inputFact()]);
 
   const unshiftInput = () => {
-    setInputs((prev) => [inputFact(), ...prev]);
+    setInputs(prev => [inputFact(), ...prev]);
   };
   return (
     <>
       <button onClick={unshiftInput}>先頭に追加</button>
-      <div className="flex">
+      <div className='flex'>
         <div>
           <strong>{`key={ユニークキー}`}</strong>
           <ul>
-            {inputs.map((input) => (
+            {inputs.map(input => (
               <li key={input.key}>
                 {input.key}: {input.value}
               </li>
