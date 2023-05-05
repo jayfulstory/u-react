@@ -2,6 +2,7 @@ import { useState } from 'react';
 const Example = () => {
   const OPTIONS = ['Apple', 'Banana', 'Cherry'];
   const [selected, setSelected] = useState('Banana');
+
   return (
     <>
       <select value={selected} onChange={e => setSelected(e.target.value)}>
