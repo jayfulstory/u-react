@@ -16,10 +16,8 @@ const SecondButton = styled(FirstButton)`
 `;
 const ThirdButton = styled(SecondButton)`
   color: black;
-  ${({ color }) =>
-    color
-      ? 'color: white; background-color: black;'
-      : 'background-color: green'};
+  background-color: green;
+  ${({ bool }) => bool && 'color: white; background-color: black;'};
 `;
 
 const Example = () => {
@@ -28,7 +26,7 @@ const Example = () => {
       <FirstButton>ボタン1</FirstButton>
       <SecondButton>ボタン2</SecondButton>
       <ThirdButton>ボタン3</ThirdButton>
-      <ThirdButton color>ボタン3</ThirdButton>
+      <ThirdButton bool>ボタン3</ThirdButton>
     </>
   );
 };
