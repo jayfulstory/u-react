@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState } from 'react';
 const Form = ({ createTodo }) => {
-  const [enteredTodo, setEnteredTodo] = useState("");
+  const [enteredTodo, setEnteredTodo] = useState('');
 
-  const addTodo = (e) => {
+  const addTodo = e => {
     e.preventDefault();
 
     const newTodo = {
@@ -12,15 +12,15 @@ const Form = ({ createTodo }) => {
 
     createTodo(newTodo);
 
-    setEnteredTodo("");
+    setEnteredTodo('');
   };
   return (
     <div>
       <form onSubmit={addTodo}>
         <input
-          type="text"
+          type='text'
           value={enteredTodo}
-          onChange={(e) => setEnteredTodo(e.target.value)}
+          onChange={e => setEnteredTodo(e.target.value)}
         />
         <button>追加</button>
       </form>

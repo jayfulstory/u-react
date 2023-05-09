@@ -1,10 +1,13 @@
-import Todo from "./components/Todo"
+import Todo from './components/Todo';
+import { ChakraProvider } from '@chakra-ui/react';
 
 const Example = () => {
   return (
     <>
-      <h2>Reminder</h2>
-      <Todo />
+      <ChakraProvider>
+        <h2>Reminder</h2>
+        <Todo />
+      </ChakraProvider>
     </>
   );
 };
