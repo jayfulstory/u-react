@@ -7,13 +7,14 @@ const Example = () => {
   // 不変性()
   // 上記の要件を満たさない操作は「副作用」と呼ぶ。
 
-  const val1 = 3, val2 = 9;
+  const val1 = 3,
+    val2 = 9;
   let result;
-  const add = (val1) => {
+  const add = val1 => {
     console.log(val1);
     result = val1 + val2;
     return val1 + val2;
-  }
+  };
 
   return (
     <>
