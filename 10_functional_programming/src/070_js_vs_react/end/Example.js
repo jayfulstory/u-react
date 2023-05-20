@@ -1,4 +1,4 @@
-import Todo from "./components/Todo"
+import Todo from './components/Todo';
 
 // POINT React vs JS Todo App
 const Example = () => {

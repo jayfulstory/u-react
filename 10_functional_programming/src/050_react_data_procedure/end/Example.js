@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 /* 
 POINT Reactでの状態管理(state)と処理(関数コンポーネント)の分離
@@ -14,14 +14,14 @@ const Example = () => {
   // 関数コンポーネントはJSXを作成する場所なので、それ以外の処理は書かない。
 
   // 状態はstateに分離する
-  const [ state, setState ] = useState(0);
-  
+  const [state, setState] = useState(0);
+
   // 関数外に影響を及ぼさない。
   // window.alert('hello')
 
   const increment = () => {
     setState(state + 1);
-  }
+  };
   return (
     <>
       <button onClick={increment}>+</button>
