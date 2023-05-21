@@ -1,28 +1,28 @@
 // POINT useReducerの練習問題
-import { useReducer } from "react";
+import { useReducer } from 'react';
 
-const CALC_OPTIONS = ["add", "minus", "divide", "multiply"];
+const CALC_OPTIONS = ['add', 'minus', 'divide', 'multiply'];
 
 const reducer = (state, { type, payload }) => {
   switch (type) {
-    case "change": {
+    case 'change': {
       const { name, value } = payload;
       return { ...state, [name]: value };
     }
-    case "add": {
+    case 'add': {
       return { ...state, result: state.a + state.b };
     }
-    case "minus": {
+    case 'minus': {
       return { ...state, result: state.a - state.b };
     }
-    case "divide": {
+    case 'divide': {
       return { ...state, result: state.a / state.b };
     }
-    case "multiply": {
+    case 'multiply': {
       return { ...state, result: state.a * state.b };
     }
     default:
-      throw new Error("operator is invalid");
+      throw new Error('operator is invalid');
   }
 };
 
@@ -35,19 +35,22 @@ const Example = () => {
 
   const [state, dispatch] = useReducer(reducer, initState);
 
-  const calculate = (e) => {
-    dispatch({type: e.target.value});
+  const calculate = e => {
+    dispatch({ type: e.target.value });
   };
-  const numChangeHandler = (e) => {
-    dispatch({type: 'change', payload: {name: e.target.name, value: e.target.value}});
+  const numChangeHandler = e => {
+    dispatch({
+      type: 'change',
+      payload: { name: e.target.name, value: e.target.value },
+    });
   };
   return (
     <>
       <div>
         a:
         <input
-          type="number"
-          name="a"
+          type='number'
+          name='a'
           value={state.a}
           onChange={numChangeHandler}
         />
@@ -55,14 +58,14 @@ const Example = () => {
       <div>
         b:
         <input
-          type="number"
-          name="b"
+          type='number'
+          name='b'
           value={state.b}
           onChange={numChangeHandler}
         />
       </div>
-      <select value={state.type} name="type" onChange={calculate}>
-        {CALC_OPTIONS.map((type) => (
+      <select value={state.type} name='type' onChange={calculate}>
+        {CALC_OPTIONS.map(type => (
           <option key={type} value={type}>
             {type}
           </option>
