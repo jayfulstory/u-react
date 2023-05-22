@@ -28,6 +28,7 @@ const Example = () => {
   };
 
   const [state, dispatch] = useReducer(reducer, initState);
+  // console.log(state.a === initState.a);
 
   const calculate = e => {
     dispatch({ type: e.target.value });
