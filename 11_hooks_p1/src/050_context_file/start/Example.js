@@ -1,7 +1,9 @@
+// POINT Contextコードの整理方法
+
 import './Example.css';
-import Header from './components/Header.js';
 import Main from './components/Main.js';
-import ThemeProvider from './context/ThemeContext';
+import Header from './components/Header.js';
+import { ThemeProvider } from './context/ThemeContext.js';
 
 const Example = () => {
   return (
