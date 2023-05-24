@@ -1,28 +1,28 @@
-import { createContext, useReducer, useContext } from "react";
+import { createContext, useReducer, useContext } from 'react';
 
 export const CalcContext = createContext();
 export const CalcDispatchContext = createContext();
 
 const reducer = (state, { type, payload }) => {
   switch (type) {
-    case "change": {
+    case 'change': {
       const { name, value } = payload;
       return { ...state, [name]: value };
     }
-    case "add": {
+    case 'add': {
       return { ...state, result: parseInt(state.a) + parseInt(state.b) };
     }
-    case "minus": {
+    case 'minus': {
       return { ...state, result: state.a - state.b };
     }
-    case "divide": {
+    case 'divide': {
       return { ...state, result: state.a / state.b };
     }
-    case "multiply": {
+    case 'multiply': {
       return { ...state, result: state.a * state.b };
     }
     default:
-      throw new Error("operator is invalid");
+      throw new Error('operator is invalid');
   }
 };
 

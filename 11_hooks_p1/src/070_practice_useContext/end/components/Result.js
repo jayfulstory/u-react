@@ -1,4 +1,4 @@
-import { useCalc } from "../context/CalcContext";
+import { useCalc } from '../context/CalcContext';
 
 const Result = () => {
   const state = useCalc();

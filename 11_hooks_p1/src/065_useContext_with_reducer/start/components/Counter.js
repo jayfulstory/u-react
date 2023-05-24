@@ -7,6 +7,8 @@ const Counter = () => {
       <CounterResult />
       <CounterButton step={2} calcType='+' />
       <CounterButton step={2} calcType='-' />
+      <CounterButton step={5} calcType='+' />
+      <CounterButton step={5} calcType='-' />
       <CounterButton step={10} calcType='+' />
       <CounterButton step={10} calcType='-' />
     </>
