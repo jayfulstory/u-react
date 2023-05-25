@@ -1,6 +1,6 @@
-import List from "./List"
-import Form from "./Form"
-import { TodoProvider } from "../context/TodoContext"
+import List from './List';
+import Form from './Form';
+import { TodoProvider } from '../context/TodoContext';
 
 const Todo = () => {
   return (
@@ -8,6 +8,6 @@ const Todo = () => {
       <List />
       <Form />
     </TodoProvider>
-  )
+  );
 };
 export default Todo;
