@@ -1,11 +1,11 @@
-import { useTodos } from "../context/TodoContext";
-import Item from "./Item";
+import Item from './Item';
+import { useTodos } from '../context/TodoContext';
 
 const List = () => {
   const todos = useTodos();
   return (
     <div>
-      {todos.map((todo) => (
+      {todos.map(todo => (
         <Item todo={todo} key={todo.id} />
       ))}
     </div>
