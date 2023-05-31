@@ -1,5 +1,5 @@
-import Counter from "./components/Counter";
-import { CounterProvider } from "./context/CounterContext";
+import Counter from './components/Counter';
+import { CounterProvider } from './context/CounterContext';
 
 const Example = () => {
   return (
